@@ -7,7 +7,15 @@
     color: #e8fdff;
 }
 
-#nav-bar .logo{
+#nav-bar .logo {
     height: 80px;
     width: 80px;
+    float: left;
+}
+
+#nav-bar .header {
+    font-size: 200%;
+    float: left;
+    margin-left: 10px;
+    line-height: 2.5;
 }
