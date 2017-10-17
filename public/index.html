@@ -13,6 +13,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -31,67 +32,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Tweeter, yo.</h1>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
-      <p>Tweeter, yo.</p>
+      <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form action="/tweets/" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
     </main>
 
   </body>
