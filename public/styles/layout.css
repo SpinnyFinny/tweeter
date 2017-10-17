@@ -7,10 +7,6 @@ html {
   box-sizing: border-box;
 }
 
-* {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -19,20 +15,23 @@ html {
  * Global layout stuff
  */
 
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
 }
 
-body main{
-  padding-top: 140px;
+body main {
+  padding: 140px 0;
   margin:auto;
   width: 450px;
   background: white;
 }
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
