@@ -64,6 +64,7 @@ $(function(){
   
   var tweetTemplate = $("#displayed-tweet-template").html();
   var compiledTweetTemplate = Handlebars.compile(tweetTemplate);
-  $("#tweets-container").html(compiledTweetTemplate(data));
+
+  $("#tweets-container").html(compiledTweetTemplate(data.reverse()));
 
 });
