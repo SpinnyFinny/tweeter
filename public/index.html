@@ -13,7 +13,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-composer.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
@@ -34,7 +34,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="tweet-composer card-container">
           <h2>Compose Tweet</h2>
           <form action="/tweets/" method="POST">
             <textarea name="text" placeholder="What are you humming about?"></textarea>
@@ -43,38 +43,22 @@
           </form>
         </section>
       <section id="tweet-container">
-        <article class="new-tweet tweet">
-          <header>
-            <div class="header-content">
-              <img class='avatar' src="http://fillmurray.com/80/80">
-              <h2>Finn</h2>
-              <span class="username">@SpinnyFinny</span>
-            </div> 
-          </header>
-            <div class="tweet-body clearfix">
-              <p>Tweeter is better than Twitter</p>
-            </div>
-          <footer class="clearfix">
-            <span>1 second ago</span>
-            <img>
-            <img>
-            <img>
-          </footer>
-        </article>
-        <article class="new-tweet tweet">
+        <article class="tweet card-container">
             <header>
                 <img class='avatar' src="http://fillmurray.com/80/80">
                 <h2>Finn</h2>
-                <span class="username">@SpinnyFinny</span>
+                <span class="tweet-author">@SpinnyFinny</span>
             </header>
               <div class="tweet-body clearfix">
                 <p>Tweeter is better than Twitter</p>
               </div>
             <footer class="clearfix">
               <span>1 second ago</span>
-              <img>
-              <img>
-              <img>
+              <div class="mini-icons">
+                <img src="/images/flag.png">
+                <img src="/images/repost.png">
+                <img src="/images/heart.png">
+              </div>
             </footer>
           </article>
       </section>
