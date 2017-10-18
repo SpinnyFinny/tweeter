@@ -67,4 +67,16 @@ $(function(){
 
   $("#tweets-container").html(compiledTweetTemplate(data.reverse()));
 
+  var newTweetForm = $(".tweet-composer form");
+  newTweetForm.on('submit', function(event){
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize()
+    }).done(function() {
+      console.log('done! :)');
+    });
+  })
+
 });
