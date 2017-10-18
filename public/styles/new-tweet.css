@@ -5,11 +5,13 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
-    padding: 0 10px 10px;
+    padding: 10px;
 }
 
 .new-tweet h2 {
     border-bottom: solid black 1px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .new-tweet textarea {

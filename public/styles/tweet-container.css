@@ -1,0 +1,49 @@
+/* border: solid #919191 1px;
+margin: 10px 2em 0 2em;
+border-radius: 10px; */
+
+.tweet {
+  margin-top: 10px;
+  padding: 0;
+  background-color: white;
+}
+
+
+.tweet .avatar {
+  float:left;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+}
+
+.tweet h2 {
+  float:left;
+  border-bottom-style: none;
+  margin-left: 10px;
+}
+
+.tweet .username {
+  float: right;
+  font-style: italic;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.tweet header {
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  border-radius: 10px 10px 0 0;
+  background-color: #eee;
+}
+
+.tweet .tweet-body {
+  padding: 20px 10px;
+}
+
+.tweet footer {
+  padding: 10px;
+  border-top: solid black 1px;
+}
