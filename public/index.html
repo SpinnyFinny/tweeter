@@ -22,6 +22,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/handlebars-v4.0.11.js"></script>
   </head>
 
   <body>
@@ -42,7 +43,33 @@
             <span class="counter">140</span>
           </form>
         </section>
-      <section id="tweet-container">
+      <section id="tweets-container">
+        <script id="displayed-tweet-template" type="text/x-handlebars-template">
+          
+          
+          {{#each this}}
+          <article class="tweet card-container">
+            <header>
+              <img class='avatar' src="{{user.avatars.regular}}">
+              <h2>{{user.name}}</h2>
+              <span class="tweet-author">{{user.handle}}</span>
+            </header>
+              <div class="tweet-body clearfix">
+                <p>{{content.text}}</p>
+              </div>
+            <footer class="clearfix">
+              <span>{{created_at}} ago</span>
+              <div class="mini-icons">
+                <img src="/images/flag.png">
+                <img src="/images/repost.png">
+                <img src="/images/heart.png">
+              </div>
+            </footer>
+          </article>
+          {{/each}}
+          
+
+        </script>
       </section>
     </main>
   </body>

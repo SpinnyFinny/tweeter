@@ -1,35 +1,5 @@
 $(function(){
 
-  function renderTweets(tweets) {
-    for(tweet of data){
-      debugger;
-      $('#tweet-container').append(createTweetElement(tweet));
-    }
-  }
-
-  function createTweetElement(tweetData) {
-    
-    var tweet = $(`<article class="tweet card-container">
-    <header>
-        <img class='avatar' src=${tweetData.user.avatars.regular}>
-        <h2>${tweetData.user.name}</h2>
-        <span class="tweet-author">${tweetData.user.handle}</span>
-    </header>
-      <div class="tweet-body clearfix">
-        <p>${tweetData.content.text}</p>
-      </div>
-    <footer class="clearfix">
-      <span>${tweetData.created_at} ago</span>
-      <div class="mini-icons">
-        <img src="/images/flag.png">
-        <img src="/images/repost.png">
-        <img src="/images/heart.png">
-      </div>
-    </footer>
-    </article>`)
-    return tweet;
-  }
-  
   var data = [
     {
       "user": {
@@ -74,9 +44,26 @@ $(function(){
         "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
       },
       "created_at": 1461113796368
+    },
+    {
+      "user": {
+        "name": "Hacker",
+        "avatars": {
+          "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+          "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+          "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+        },
+        "handle": "@1337"
+      },
+      "content": {
+        "text": "hacks: <script>alert('hacked lolz');</script>"
+      },
+      "created_at": 1461113796368
     }
   ];
   
-  renderTweets(data);
+  var tweetTemplate = $("#displayed-tweet-template").html();
+  var compiledTweetTemplate = Handlebars.compile(tweetTemplate);
+  $("#tweets-container").html(compiledTweetTemplate(data));
 
 });
