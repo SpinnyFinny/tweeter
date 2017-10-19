@@ -16,11 +16,14 @@ $(function() {
   var newTweetForm = $(".tweet-composer form");
   newTweetForm.on('submit', function(event){
     event.preventDefault();
+
     $.ajax({
       url: "/tweets",
       method: "POST",
-      data: $(this).serialize()
+      data: $(this).serialize(),
+      context: this
     }).done(function() {
+      this.reset();
       loadTweets();
     });
   })
