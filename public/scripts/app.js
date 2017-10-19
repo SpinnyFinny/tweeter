@@ -3,7 +3,11 @@ $(function() {
   var tweetTemplate = $("#displayed-tweet-template").html();
   var compiledTweetTemplate = Handlebars.compile(tweetTemplate);
 
-  function loadTweets(){
+  // function renderTweets(tweets) {
+  //   $("#tweets-container").html(compiledTweetTemplate(tweets));
+  // }
+
+  function loadTweets() {
     $.ajax({
       url: "/tweets",
       method: "GET",
@@ -13,10 +17,22 @@ $(function() {
     })
   }
 
+  // $.get('/tweets').then(renderTweets);
+
   var newTweetForm = $(".tweet-composer form");
   newTweetForm.on('submit', function(event){
     event.preventDefault();
-
+    var tweetText = $('#tweet-text').val()
+    $('#tweet-text').on('focus', function() {
+      $('#submit-tweet-error').html('').css({'visibility': 'hidden'})
+    });
+    if(tweetText.length <= 0){
+      $('#submit-tweet-error').html('Please enter some text').css({'visibility': 'visible'})
+      return;
+    } else if (tweetText.length > 140) {
+      $('#submit-tweet-error').html('Your tweet is too long').css({'visibility': 'visible'})
+      return;
+    }
     $.ajax({
       url: "/tweets",
       method: "POST",
@@ -24,6 +40,7 @@ $(function() {
       context: this
     }).done(function() {
       this.reset();
+      $('#char-counter').html(140);
       loadTweets();
     });
   })
