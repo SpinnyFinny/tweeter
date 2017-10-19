@@ -40,8 +40,8 @@ $(function() {
   })
   
   $('#compose-button').on('click', function() {
-    $('#tweet-text').focus();
     $('.tweet-composer').slideToggle();
+    $('#tweet-text').focus();
   });
   
   loadTweets();
