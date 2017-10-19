@@ -43,6 +43,10 @@
   padding: 20px 10px;
 }
 
+.tweet-body p{
+  word-wrap: break-word;
+}
+
 .tweet footer {
   padding: 10px;
   border-top: solid black 1px;
