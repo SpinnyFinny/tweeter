@@ -20,3 +20,18 @@
     margin-left: 10px;
     line-height: 2.5;
 }
+
+#compose-button {
+    float: right;
+    width: 100px;
+    height: 60px;
+    margin: 10px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+    border: solid #eee 1px;
+}
+
+#compose-button:hover{
+    background-color: white;
+}
