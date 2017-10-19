@@ -3,10 +3,6 @@ $(function() {
   var tweetTemplate = $("#displayed-tweet-template").html();
   var compiledTweetTemplate = Handlebars.compile(tweetTemplate);
 
-  // function renderTweets(tweets) {
-  //   $("#tweets-container").html(compiledTweetTemplate(tweets));
-  // }
-
   function loadTweets() {
     $.ajax({
       url: "/tweets",
@@ -16,8 +12,6 @@ $(function() {
       $("#tweets-container").html(compiledTweetTemplate(data));
     })
   }
-
-  // $.get('/tweets').then(renderTweets);
 
   var newTweetForm = $(".tweet-composer form");
   newTweetForm.on('submit', function(event){
@@ -44,5 +38,11 @@ $(function() {
       loadTweets();
     });
   })
+  
+  $('#compose-button').on('click', function() {
+    $('#tweet-text').focus();
+    $('.tweet-composer').slideToggle();
+  });
+  
   loadTweets();
 });
