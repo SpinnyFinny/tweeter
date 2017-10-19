@@ -20,7 +20,12 @@
     resize: vertical;
 }
 
-.tweet-composer .counter {
+#char-counter {
     float: right;
     font-style: italic;
+}
+
+#submit-tweet-error {
+    color: red;
+    visibility: hidden;
 }
