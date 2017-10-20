@@ -3,6 +3,10 @@ $(function() {
   var tweetTemplate = $("#displayed-tweet-template").html();
   var compiledTweetTemplate = Handlebars.compile(tweetTemplate);
 
+  Handlebars.registerHelper('convertTime', function(timeStamp){
+    return moment(timeStamp).fromNow();
+  })
+
   function loadTweets() {
     $.ajax({
       url: "/tweets",

@@ -20,6 +20,7 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/handlebars-v4.0.11.js"></script>
@@ -60,7 +61,7 @@
                 <p>{{content.text}}</p>
               </div>
             <footer class="clearfix">
-              <span>{{created_at}} ago</span>
+              <span>{{convertTime created_at}}</span>
               <div class="mini-icons">
                 <img src="/images/flag.png">
                 <img src="/images/repost.png">
