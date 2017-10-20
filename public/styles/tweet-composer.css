@@ -1,3 +1,7 @@
+#tweet-composer {
+    display: none;
+}
+
 .card-container {
     margin: 0 2em 0 2em;
     background-color: #eee;
