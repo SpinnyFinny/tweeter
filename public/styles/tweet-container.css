@@ -61,7 +61,20 @@
   opacity: 1;
 }
 
-.tweet .mini-icons img {
-  height: 25px;
-  width: 30px;
+.tweet .mini-icons .fa {
+  font-size: 1.3em;
+  padding: 1px;
+  margin: 0 2px;
+}
+
+.fa-heart:hover {
+  color: red;
+}
+
+.fa-retweet:hover {
+  color: #00a087;
+}
+
+.fa-flag:hover {
+  color: #b80000;
 }
