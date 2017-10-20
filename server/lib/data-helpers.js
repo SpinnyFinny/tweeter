@@ -9,18 +9,13 @@ module.exports = function makeDataHelpers(db) {
 
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
-        callback(null, true);
-      });
+      db.collection('tweets').insertOne(newTweet, callback);
     },
 
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
-      simulateDelay(() => {
-        const sortNewestFirst = (a, b) => b.created_at - a.created_at;
-        callback(null, db.tweets.sort(sortNewestFirst));
-      });
+      //mongo sort() -1 is decending; 1 is ascending
+      db.collection('tweets').find().sort({"created_at": -1 }).toArray(callback);
     }
 
   };
