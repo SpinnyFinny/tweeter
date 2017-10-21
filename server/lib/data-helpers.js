@@ -16,7 +16,10 @@ module.exports = function makeDataHelpers(db) {
     getTweets: function(callback) {
       //mongo sort() -1 is decending; 1 is ascending
       db.collection('tweets').find().sort({"created_at": -1 }).toArray(callback);
-    }
+    },
 
+    registerNewUser: function(newUser, callback) {
+      db.collection('users').insertOne(newUser, callback)
+    }
   };
 }
