@@ -6,23 +6,28 @@
     background-color: #00a087;
     color: #e8fdff;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 #nav-bar .logo {
     height: 80px;
     width: 80px;
-    float: left;
+    order: 0;
 }
 
 #nav-bar .header {
-    font-size: 200%;
-    float: left;
+    font-size: 300%;
     margin-left: 10px;
-    line-height: 2.5;
+    order: 1;
+}
+
+#login-form {
+    order: 2;
+    margin-left: auto;
 }
 
 #compose-button {
-    float: right;
     width: 100px;
     height: 60px;
     margin: 10px;
@@ -30,6 +35,7 @@
     color: black;
     border-radius: 10px;
     border: solid #eee 1px;
+    order: 3;
 }
 
 #compose-button:hover{
