@@ -58,7 +58,6 @@ $(function () {
           .attr('id')
       }
     }).done(function () {
-      console.log('liked');
       loadTweets();
     });
   });
