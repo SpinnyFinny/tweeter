@@ -1,5 +1,5 @@
 "use strict";
-
+const { ObjectId } = require('mongodb')
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
@@ -18,7 +18,21 @@ module.exports = function makeDataHelpers(db) {
       db.collection('tweets').find().sort({"created_at": -1 }).toArray(callback);
     },
 
-    registerNewUser: function(newUser, callback) {
+    likeTweet: function (tweetId) {
+      db.collection('tweets').update(
+        { _id: ObjectId(tweetId) },
+        { $inc: { likes: +1 } }
+      )
+    },
+
+    unlikeTweet: function (tweetId) {
+      db.collection('tweets').update(
+        { _id: ObjectId(tweetId) },
+        { $inc: { likes: -1 } }
+      )
+    },
+
+    registerNewUser: function (newUser, callback) {
       db.collection('users').insertOne(newUser, callback)
     }
   };

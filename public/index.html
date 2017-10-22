@@ -60,7 +60,7 @@
         <!-- Handlebars Template -->
         <script id="displayed-tweet-template" type="text/x-handlebars-template">
           {{#each this}}
-          <article class="tweet card-container">
+          <article id="{{_id}}"class="tweet card-container">
             <header>
               <img class='avatar' src="{{user.avatars.regular}}">
               <h2>{{user.name}}</h2>
@@ -72,6 +72,7 @@
             <footer class="clearfix">
               <span>{{convertTime created_at}}</span>
               <div class="mini-icons">
+                <span class="like-count">{{likes}}</span>
                 <i class="fa fa-heart"></i>
                 <i class="fa fa-retweet"></i>
                 <i class="fa fa-flag"></i>
