@@ -45,7 +45,6 @@ module.exports = function(DataHelpers) {
   tweetsRoutes.post('/like', function (req, res) {
     console.log(req.body.tweetId)
     DataHelpers.likeTweet(req.body.tweetId);
-    res.send('done')
   });
 
   tweetsRoutes.post('/unlike', function (req, res) {

@@ -42,16 +42,6 @@ $(function() {
       loadTweets();
     });
   })
-  
-  
-  // $( "targeg" ).toggle(function() {
-  //   alert( "First handler for .toggle() called." );
-  // }, function() {
-  //   alert( "Second handler for .toggle() called." );
-  // });
-
-
-  
 
   $(document).on('click', '.fa-heart', function () {
     $.ajax({
@@ -59,9 +49,7 @@ $(function() {
       method: 'POST',
       data: { tweetId: $(this).closest('article').attr('id') }
     }).done(function () {
-      //  update number beside like button with info from DB
       loadTweets();
-      console.log('it worked')
     })
   });
 
@@ -71,7 +59,4 @@ $(function() {
   });
   
   loadTweets();
-
-  
-  
 });
