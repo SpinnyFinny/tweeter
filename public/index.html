@@ -35,9 +35,9 @@
       <span class="header">Tweeter</span>
       <form id="login-form" action="/login" method="POST">
         <label for="email">Email:</label>
-        <input id="login" type="email" name="email">
+        <input id="login-form-email" type="email" name="email">
         <label for="password">Password:</label>
-        <input id="password" type="password" name="password">
+        <input id="login-form-password" type="password" name="password">
         <input type="submit" value="Login">
       </form>
       <button id="compose-button">Compose</button>
@@ -46,6 +46,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div id="register">
+        <form id="register-form" action="/register" method="POST">
+          <label for="email">Email:</label>
+          <input id="register-form-email" type="email" name="email">
+          <label for="username">Username:</label>
+          <input id="register-form-username" type="text" name="username">
+          <label for="password">Password:</label>
+          <input id="register-form-password" type="password" name="password">
+          <input type="submit" value="Register">
+        </form>
+      </div>
+      
       <section id="tweet-composer" class="tweet-composer card-container">
           <h2>Compose Tweet</h2>
           <form action="/tweets/" method="POST">
